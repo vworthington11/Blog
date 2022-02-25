@@ -1,0 +1,119 @@
+body {
+  margin: 0px;
+  background-color: black;
+}
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Homemade Apple", "Mochiy Pop P One", sans-serif;
+  font-size: 5rem;
+}
+footer {
+  margin: 0 auto;
+}
+
+.container {
+  font-size: 1.75rem;
+  margin: 0 auto;
+}
+.containerMain,
+.containerBottom {
+  font-family: "EB Garamond", serif;
+}
+
+.containerMain {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: 400px 400px;
+  grid-template-areas:
+    "topLeft topMiddle topRight"
+    "bottomLeft bottomMiddle bottomRight";
+  column-gap: 80px;
+  border: 2px red solid;
+  width: 75%;
+  margin: auto;
+  justify-content: center;
+  row-gap: 10px;
+}
+.aPages {
+  text-decoration: none;
+  color: black;
+}
+.aPages:hover {
+  color: gray;
+}
+.containerBottom {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 300px 500px 200px;
+  grid-template-areas: "tleft tmiddle tright";
+  border: 2px yellow solid;
+  justify-content: center;
+  font-family: "Philosopher", sans-serif;
+  font-size: 1.25rem;
+}
+.box {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  border: 2px black solid;
+}
+img {
+  border-radius: 30px;
+}
+#todo {
+  grid-area: topLeft;
+  justify-content: center;
+}
+#recipe {
+  grid-area: topMiddle;
+  justify-content: center;
+}
+#life {
+  grid-area: topRight;
+  justify-content: center;
+}
+#todoDescription,
+#recipeDescription,
+#lifeDescription {
+  font-size: 1.5rem;
+  text-align: center;
+}
+#todoDescription {
+  grid-area: bottomLeft;
+  justify-content: center;
+}
+#recipeDescription {
+  grid-area: bottomMiddle;
+  justify-content: center;
+}
+#lifeDescription {
+  grid-area: bottomRight;
+  justify-content: center;
+}
+.boxFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px green solid;
+}
+#signUp {
+  grid-area: tleft;
+}
+#nameForm {
+  grid-area: tmiddle;
+}
+#vW {
+  grid-area: tright;
+  font-family: "Homemade Apple", "Mochiy Pop P One", sans-serif;
+  font-size: 1.5rem;
+}
+.submit {
+  font-size: 1.35rem;
+  background-color: #a9a9a9;
+  color: black;
+  border-radius: 5px;
+  font-family: sans-serif;
+  border: none;
+  padding: 3px 20px;
+}
