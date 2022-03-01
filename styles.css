@@ -1,62 +1,67 @@
 body {
   margin: 0px;
-  background-color: black;
+  background-color: rgba(244, 241, 232, 1);
 }
 h1 {
   text-align: center;
   margin: 0 auto;
   font-family: "Homemade Apple", "Mochiy Pop P One", sans-serif;
   font-size: 5rem;
-}
-footer {
-  margin: 0 auto;
+  color: #cccdc6;
 }
 
-.container {
+.row {
   font-size: 1.75rem;
-  margin: 0 auto;
+  color: #746d69;
+  text-align: center;
+  justify-content: center;
+  margin: 40px auto;
 }
 .containerMain,
-.containerBottom {
+.containerBottom,
+.containerRecipe,
+.aboutTitle {
   font-family: "EB Garamond", serif;
 }
 
 .containerMain {
   display: grid;
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: 400px 400px 300px;
   grid-template-rows: 400px 400px;
   grid-template-areas:
     "topLeft topMiddle topRight"
     "bottomLeft bottomMiddle bottomRight";
-  column-gap: 80px;
-  border: 2px red solid;
-  width: 75%;
+  column-gap: 50px;
   margin: auto;
   justify-content: center;
   row-gap: 10px;
+  width: 70vw;
 }
-.aPages {
+.aPages,
+#goHome,
+#about,
+#home,
+#contact {
   text-decoration: none;
-  color: black;
-}
-.aPages:hover {
-  color: gray;
+  color: #746d69;
 }
 .containerBottom {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 300px 500px 200px;
   grid-template-areas: "tleft tmiddle tright";
-  border: 2px yellow solid;
   justify-content: center;
   font-family: "Philosopher", sans-serif;
   font-size: 1.25rem;
+}
+.containerFooter {
+  text-align: center;
+  font-family: sans-serif;
 }
 .box {
   display: flex;
   align-items: stretch;
   justify-content: stretch;
-  border: 2px black solid;
 }
 img {
   border-radius: 30px;
@@ -91,11 +96,17 @@ img {
   grid-area: bottomRight;
   justify-content: center;
 }
+.aPages:hover,
+#about:hover,
+#home:hover,
+#contact:hover {
+  color: #36454f;
+  font-weight: bold;
+}
 .boxFooter {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px green solid;
 }
 #signUp {
   grid-area: tleft;
@@ -106,7 +117,8 @@ img {
 #vW {
   grid-area: tright;
   font-family: "Homemade Apple", "Mochiy Pop P One", sans-serif;
-  font-size: 1.5rem;
+  font-size: 3rem;
+  color: #cccdc6;
 }
 .submit {
   font-size: 1.35rem;
@@ -116,4 +128,187 @@ img {
   font-family: sans-serif;
   border: none;
   padding: 3px 20px;
+}
+.containerRecipe {
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-template-areas: "tleft tright";
+  justify-content: center;
+  grid-column-gap: 50px;
+}
+.boxRecipe {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+#recipePic {
+  grid-area: tleft;
+  margin: 0 auto;
+  max-width: 400px;
+}
+#recipeContent {
+  grid-area: tright;
+  font-size: 1.75rem;
+  text-align: center;
+  color: #969799;
+}
+.date {
+  font-size: 1rem;
+}
+#goHome:hover {
+  color: #a9a9a9;
+}
+.aboutMe {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "EB Garamond", serif;
+  color: #4a707a;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 15%;
+  margin: 0 auto;
+  color: #4a707a;
+  font-family: "Mochiy Pop P One", sans-serif;
+}
+#imgMe {
+  border-radius: 5px 5px 0 0;
+}
+.contactInfo {
+  font-family: "EB Garamond", serif;
+  text-align: center;
+  line-height: 2;
+  margin: 50px auto;
+  color: #4a707a;
+  font-weight: bold;
+}
+section {
+  padding: 30px;
+  font-family: "EB Garamond", serif;
+  text-align: left;
+}
+.blogTitle {
+  text-transform: uppercase;
+}
+@media (max-width: 800px) {
+  h1 {
+    font-size: 1rem;
+  }
+  .container,
+  .row {
+    margin: 0 auto;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .containerMain,
+  #todoDescription,
+  #recipeDescription,
+  #lifeDescription {
+    display: grid;
+    grid-template-columns: minmax(100px, auto);
+    grid-template-rows: minmax(125px, auto);
+    grid-template-areas:
+      "topLeft topMiddle topRight"
+      "bottomLeft bottomMiddle bottomRight";
+    font-size: 0.75rem;
+    justify-content: center;
+    align-items: initial;
+    width: auto;
+  }
+  .containerBottom {
+    display: grid;
+    grid-template-columns: minmax(100px, auto);
+    grid-template-areas: "tleft tmiddle tright";
+    font-size: 0.75rem;
+    width: auto;
+    justify-content: center;
+    align-items: initial;
+    text-align: center;
+  }
+  #signUp,
+  #nameForm,
+  #email,
+  #fname,
+  #vW,
+  .submit {
+    font-size: 0.75rem;
+  }
+  .containerFooter {
+    font-size: 0.5rem;
+  }
+  img {
+    max-width: 100px;
+    max-height: 125px;
+  }
+  .containerRecipe {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: "tleft tright";
+    justify-content: center;
+    font-size: 0.75rem;
+    border: 2px purple solid;
+    grid-column-gap: 20px;
+  }
+  .boxRecipe {
+    display: flex;
+    border: 2px green solid;
+  }
+  .date {
+    font-size: 0.4rem;
+  }
+  .aboutTitle {
+    font-size: 1.25rem;
+    margin: 20px auto;
+  }
+  .blogTitle {
+    font-size: 1rem;
+  }
+  .card {
+    width: 50%;
+  }
+  .contactInfo,
+  .aboutMe {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 801px) and (max-width: 1300px) {
+  .containerMain,
+  #todoDescription,
+  #recipeDescription,
+  #lifeDescription,
+  .container {
+    display: grid;
+    grid-template-columns: minmax(275px, auto);
+    grid-template-rows: minmax(200px, auto);
+    grid-template-areas:
+      "topLeft topMiddle topRight"
+      "bottomLeft bottomMiddle bottomRight";
+    font-size: 1.25rem;
+    justify-content: center;
+    width: auto;
+  }
+  .containerBottom,
+  .containerFooter {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(250px, auto);
+    grid-template-areas: "tleft tmiddle tright";
+    font-size: 0.6rem;
+  }
+  .submit,
+  #email {
+    font-size: 1rem;
+  }
+  img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  .aboutTitle {
+    font-size: 3rem;
+  }
+  .contactInfo {
+    font-size: 2rem;
+  }
 }
